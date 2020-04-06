@@ -1,0 +1,16 @@
+#!/bin/bash
+set -u
+
+#5.16 Bash
+cd /mnt/lfs/sources
+tar -xf bash-4.4.tar.gz
+cd bash-4.4
+
+./configure --prefix=/tools --without-bash-malloc
+make
+make install
+ln -sf bash /tools/bin/sh    
+
+cd /mnt/lfs/sources
+rm -rf bash-4.4
+
