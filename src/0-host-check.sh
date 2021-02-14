@@ -27,6 +27,7 @@ echo awk is `/usr/bin/awk --version | head -n1`
 else
 echo "awk not found"
 fi
+
 gcc --version | head -n1
 g++ --version | head -n1
 ldd --version | head -n1 | cut -d" " -f2- # glibc version
